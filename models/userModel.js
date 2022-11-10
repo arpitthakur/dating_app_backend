@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
  },
  email:{
   type:String,
-  unique:true,
+
   lowercase:true,
   required:true
  },
@@ -18,7 +18,15 @@ const userSchema = new mongoose.Schema({
  },
  age:{
   type:String
+ },
+ otp:{
+  type:Number
+  
+ },
+ isVerified:{
+  type:Boolean
  }
+
 
 })
 module.exports = mongoose.model('User',userSchema)
